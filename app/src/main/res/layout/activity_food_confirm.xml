@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView android:id="@+id/edit_message"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="32pt"
+        android:text="@string/confirm_text"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm_yes_button"
+        android:textSize="32pt"
+        android:onClick="confirmYes"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm_no_button"
+        android:textSize="32pt"
+        android:onClick="confirmNo"/>
+</LinearLayout>
