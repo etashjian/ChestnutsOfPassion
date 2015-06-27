@@ -23,8 +23,9 @@
     <string name="action_reset_app_instance_id">Reset App Instance ID</string>
     <string name="action_settings">Settings</string>
     <string name="action_tos">Terms of Use</string>
-    <string name="app_name">sQuirrelz</string>
-    <string name="app_title">sQirrelz</string>
+    <string name="app_name">AsQuirrelz</string>
+    <string name="app_title">AsQuirrelz</string>
+    <string name="back">Back</string>
     <string name="home_title">FOOOOOOD</string>
     <string name="optin_bottom_text">nearby places.</string>
     <string name="optin_top_text">Enable location to find</string>

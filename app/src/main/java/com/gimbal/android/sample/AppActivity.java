@@ -24,7 +24,14 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
+
+import com.gimbal.android.Place;
+import com.gimbal.android.PlaceEventListener;
+import com.gimbal.android.PlaceManager;
+
+import java.util.Set;
 
 public class AppActivity extends Activity {
     private GimbalEventReceiver gimbalEventReceiver;
@@ -46,6 +53,15 @@ public class AppActivity extends Activity {
         ListView listView = (ListView) findViewById(R.id.listview);
         listView.setAdapter(adapter);
     }
+
+    public void goBack(View view)
+    {
+        Intent i = getIntent();
+        setResult(RESULT_OK, i);
+        finish();
+    }
+
+
 
     @Override
     protected void onResume() {

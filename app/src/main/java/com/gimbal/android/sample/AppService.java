@@ -65,7 +65,7 @@ public class AppService extends Service {
 
             @Override
             public void onBeaconSighting(BeaconSighting beaconSighting, List<Visit> list) {
-                Toast.makeText(getApplicationContext(), beaconSighting.getBeacon().getTemperature()+"", Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(), beaconSighting.getBeacon().getTemperature()+"", Toast.LENGTH_LONG).show();
 
                 super.onBeaconSighting(beaconSighting, list);
             }
@@ -73,7 +73,8 @@ public class AppService extends Service {
             @Override
             public void onVisitStart(Visit visit) {
                 Place p = visit.getPlace();
-//                Toast.makeText(getApplicationContext(), p.getIdentifier(), Toast.LENGTH_LONG).show();
+//                MyApp appState = ((MyApp)getApplicationContext());
+//                appState.addBeacon(p);
 
                 NotificationManager mNotificationManager =
                         (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
@@ -85,6 +86,10 @@ public class AppService extends Service {
 
             @Override
             public void onVisitEnd(Visit visit) {
+//                Place p = visit.getPlace();
+//                MyApp appState = ((MyApp)getApplicationContext());
+//                appState.removeBeacon(p);
+
                 Toast.makeText(getApplicationContext(), "Bye Kavya :(", Toast.LENGTH_LONG).show();
                 addEvent(new GimbalEvent(TYPE.PLACE_EXIT, visit.getPlace().getName(), new Date(visit.getDepartureTimeInMillis())));
             }

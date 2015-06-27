@@ -9,12 +9,24 @@
     tools:context=".Home" >
 
     <Button
+        android:id="@+id/beacons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="viewBeacons"
+        android:text="Nearby Beacons"
+        />
+
+    <Button
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="newForm"
         android:text="@string/register"
-        />
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/beacons"
+        android:layout_toEndOf="@+id/beacons"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp" />
 
     <ListView
         android:id="@+id/foodView"

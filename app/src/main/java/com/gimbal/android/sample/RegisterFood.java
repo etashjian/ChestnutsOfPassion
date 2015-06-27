@@ -5,14 +5,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+
+import java.util.ArrayList;
 
 /**
  * Created by Bradley on 6/27/15.
  */
 public class RegisterFood extends Activity {
     private EditText location, foodType, quantity;
+
+    private ListView placeView;
+    private ArrayList<String> placeList;
+    private ArrayAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +29,10 @@ public class RegisterFood extends Activity {
         foodType = (EditText) findViewById(R.id.newFood);
         location = (EditText) findViewById(R.id.newLoc);
         quantity = (EditText) findViewById(R.id.quantity);
+
+//        placeView = (ListView) findViewById(R.id.placeView);
+//        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, ((MyApp)getApplicationContext()).getBeacons());
+//        placeView.setAdapter(adapter);
     }
 
 //        @Override

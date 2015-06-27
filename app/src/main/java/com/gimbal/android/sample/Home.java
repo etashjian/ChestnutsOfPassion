@@ -1,6 +1,7 @@
 package com.gimbal.android.sample;
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,7 +10,11 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.gimbal.android.Place;
+
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Bradley on 6/27/15.
@@ -27,7 +32,7 @@ public class Home extends Activity {
 
         foodView = (ListView) findViewById(R.id.foodView);
         foodList = new ArrayList<String>();
-        foodList.add("None");
+//        foodList.add("None");
 
         adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, foodList);
         foodView.setAdapter(adapter);
@@ -45,6 +50,11 @@ public class Home extends Activity {
         startActivityForResult(intent, 1);
 
         return true;
+    }
+
+    public void viewBeacons(View view) {
+        Intent intent = new Intent(this, AppActivity.class);
+        startActivityForResult(intent, 2);
     }
 
 //    public boolean onOptionsItemSelected(MenuItem item)
@@ -66,8 +76,26 @@ public class Home extends Activity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data)
     {
-        String message = data.getStringExtra("item");
-        foodList.add(message);
-        adapter.notifyDataSetChanged();
+        if (requestCode == 1) {
+            String bob = data.getStringExtra("foodType") + "," + data.getStringExtra("location") + "," +
+                    data.getStringExtra("quantity");
+            foodList.add(bob);
+            adapter.notifyDataSetChanged();
+        }
     }
 }
+//
+//class MyApp extends Application {
+//
+//    private List<Place> beacons;
+//
+//    public List<Place> getBeacons(){
+//        return beacons;
+//    }
+//    public void addBeacon(Place p){
+//         beacons.add(p);
+//    }
+//    public void removeBeacon(Place p){
+//        beacons.remove(p);
+//    }
+//}
