@@ -34,5 +34,9 @@
     <string name="home_title">AsQuirrelz</string>
     <string name="register">Register Food</string>
     <string name="back">Back</string>
+    <string name="confirm_text">You\'ve got foods?</string>
+    <string name="confirm_yes_button">Yum! :)</string>
+    <string name="confirm_no_button">All gone ):</string>
 
 </resources>
+
