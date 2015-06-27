@@ -25,4 +25,4 @@
     <Preference
         android:key="pref_reset_app_instance_id"
         android:title="@string/action_reset_app_instance_id" />
-</PreferenceScreen><!-- From: file:/home/etashjian/Desktop/gimbal-sampleapp_fromasdf/app/src/main/res/xml/preferences.xml -->
+</PreferenceScreen><!-- From: file:/Users/Bradley/Documents/Gimbal/ChestnutsOfPassion/app/src/main/res/xml/preferences.xml -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/etashjian/Desktop/gimbal-sampleapp_fromasdf/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/Users/Bradley/Documents/Gimbal/ChestnutsOfPassion/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="background_color">#fefff3</color>
     <color name="button_selector_pressed">#ffaa00</color>
@@ -10,11 +10,11 @@
     <color name="rsblue">#075c93</color>
     <color name="text_color">#000000</color>
     <color name="white">#ffffff</color>
-    <!-- From: file:/home/etashjian/Desktop/gimbal-sampleapp_fromasdf/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/Bradley/Documents/Gimbal/ChestnutsOfPassion/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/home/etashjian/Desktop/gimbal-sampleapp_fromasdf/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/Bradley/Documents/Gimbal/ChestnutsOfPassion/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_enable">Enable</string>
     <string name="action_not_now">Not Now</string>
@@ -23,11 +23,14 @@
     <string name="action_reset_app_instance_id">Reset App Instance ID</string>
     <string name="action_settings">Settings</string>
     <string name="action_tos">Terms of Use</string>
-    <string name="app_name">Basic Sample</string>
-    <string name="app_title">Gimbal Sample App</string>
+    <string name="app_name">sQuirrelz</string>
+    <string name="app_title">sQirrelz</string>
+    <string name="home_title">FOOOOOOD</string>
     <string name="optin_bottom_text">nearby places.</string>
     <string name="optin_top_text">Enable location to find</string>
-    <!-- From: file:/home/etashjian/Desktop/gimbal-sampleapp_fromasdf/app/src/main/res/values/styles.xml -->
+    <string name="press">Press ME</string>
+    <string name="register">Register Food</string>
+    <!-- From: file:/Users/Bradley/Documents/Gimbal/ChestnutsOfPassion/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

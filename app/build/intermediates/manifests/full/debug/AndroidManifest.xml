@@ -66,12 +66,26 @@
         <activity
             android:name="com.gimbal.android.sample.AppActivity"
             android:label="@string/app_title" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name="com.gimbal.android.sample.Home"
+            android:label="@string/home_title" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.gimbal.android.sample.RegisterFood"
+            android:label="@string/register" />
         <activity
             android:name="com.gimbal.android.sample.OptInActivity"
             android:label="OptIn"

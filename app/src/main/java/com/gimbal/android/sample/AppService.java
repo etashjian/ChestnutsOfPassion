@@ -24,13 +24,20 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
+import android.widget.Toast;
 
+import android.app.*;
+import android.support.v4.app.NotificationCompat;
+
+import com.gimbal.android.BeaconSighting;
 import com.gimbal.android.Communication;
 import com.gimbal.android.CommunicationListener;
 import com.gimbal.android.CommunicationManager;
 import com.gimbal.android.Gimbal;
+import com.gimbal.android.Place;
 import com.gimbal.android.PlaceEventListener;
 import com.gimbal.android.PlaceManager;
 import com.gimbal.android.Push;
@@ -49,16 +56,36 @@ public class AppService extends Service {
 
         Gimbal.setApiKey(this.getApplication(), "17c9242e-b249-475b-8b57-64e3184eb9d9");
 
-        // Setup PlaceEventListener
+        final NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(this)
+                        .setSmallIcon(R.drawable.notification_icon)
+                        .setContentTitle("My notification")
+                        .setContentText("Hello world, I AM KAVYA!");
         placeEventListener = new PlaceEventListener() {
 
             @Override
+            public void onBeaconSighting(BeaconSighting beaconSighting, List<Visit> list) {
+                Toast.makeText(getApplicationContext(), beaconSighting.getBeacon().getTemperature()+"", Toast.LENGTH_LONG).show();
+
+                super.onBeaconSighting(beaconSighting, list);
+            }
+
+            @Override
             public void onVisitStart(Visit visit) {
+                Place p = visit.getPlace();
+//                Toast.makeText(getApplicationContext(), p.getIdentifier(), Toast.LENGTH_LONG).show();
+
+                NotificationManager mNotificationManager =
+                        (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                // mId allows you to update the notification later on.
+                mNotificationManager.notify(1, mBuilder.build());
+
                 addEvent(new GimbalEvent(TYPE.PLACE_ENTER, visit.getPlace().getName(), new Date(visit.getArrivalTimeInMillis())));
             }
 
             @Override
             public void onVisitEnd(Visit visit) {
+                Toast.makeText(getApplicationContext(), "Bye Kavya :(", Toast.LENGTH_LONG).show();
                 addEvent(new GimbalEvent(TYPE.PLACE_EXIT, visit.getPlace().getName(), new Date(visit.getDepartureTimeInMillis())));
             }
         };

@@ -65,12 +65,26 @@
         <activity
             android:name=".AppActivity"
             android:label="@string/app_title" >
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".Home"
+            android:label="@string/home_title" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".RegisterFood"
+            android:label="@string/register" />
 
         <activity
             android:name=".OptInActivity"

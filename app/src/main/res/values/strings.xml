@@ -19,8 +19,8 @@
 -->
 <resources>
 
-    <string name="app_name">Basic Sample</string>
-    <string name="app_title">Gimbal Sample App</string>
+    <string name="app_name">sQuirrelz</string>
+    <string name="app_title">sQirrelz</string>
 	<string name="action_enable">Enable</string>
 	<string name="action_not_now">Not Now</string>
 	<string name="action_privacy_policy">Privacy Policy</string>
@@ -30,5 +30,8 @@
     <string name="action_reset_app_instance_id">Reset App Instance ID</string>
     <string name="optin_top_text">Enable location to find</string>
     <string name="optin_bottom_text">nearby places.</string>
-   
+    <string name="press">Press ME</string>
+    <string name="home_title">FOOOOOOD</string>
+    <string name="register">Register Food</string>
+
 </resources>
