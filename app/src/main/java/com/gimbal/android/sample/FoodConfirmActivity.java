@@ -40,11 +40,22 @@ public class FoodConfirmActivity extends Activity {
 
     /** Called when the user clicks the yes button */
     public void confirmYes(View view) {
-
+        Intent intent = new Intent(this, Hooray.class);
+        startActivityForResult(intent, 3);
     }
 
     /** Called when the user clicks the no button */
     public void confirmNo(View view) {
+        Intent intent = new Intent(this, Nay.class);
+        startActivityForResult(intent, 4);
+    }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        if (requestCode == 3 || requestCode == 4) {
+            //TODO: need to return intents with updating counts? or do something with server
+            finish();
+        }
     }
 }

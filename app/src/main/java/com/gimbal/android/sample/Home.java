@@ -57,6 +57,11 @@ public class Home extends Activity {
         startActivityForResult(intent, 2);
     }
 
+    public void ignore(View view) {
+        Intent intent = new Intent(this, FoodConfirmActivity.class);
+        startActivityForResult(intent, 5);
+    }
+
 //    public boolean onOptionsItemSelected(MenuItem item)
 //    {
 //        switch(item.getItemId())
@@ -77,10 +82,10 @@ public class Home extends Activity {
     public void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         if (requestCode == 1) {
-            String bob = data.getStringExtra("foodType") + "," + data.getStringExtra("location") + "," +
-                    data.getStringExtra("quantity");
-            foodList.add(bob);
-            adapter.notifyDataSetChanged();
+//            String bob = data.getStringExtra("foodType") + "," + data.getStringExtra("location") + "," +
+//                    data.getStringExtra("quantity");
+//            foodList.add(bob);
+//            adapter.notifyDataSetChanged();
         }
     }
 }

@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/Users/Bradley/Documents/Gimbal/ChestnutsOfPassion/app/src/main/res/values/Locations.xml -->
+    <eat-comment/>
+    <string-array name="locs_array">
+    <item>AO-121D</item>
+    <item>AO-131E</item>
+    <item>AO-143C</item>
+    <item>AO-202C</item>
+</string-array>
     <!-- From: file:/Users/Bradley/Documents/Gimbal/ChestnutsOfPassion/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="background_color">#fefff3</color>
@@ -26,11 +34,17 @@
     <string name="app_name">AsQuirrelz</string>
     <string name="app_title">AsQuirrelz</string>
     <string name="back">Back</string>
-    <string name="home_title">FOOOOOOD</string>
+    <string name="confirm_no_button">All gone ):</string>
+    <string name="confirm_text">You\'ve got foods?</string>
+    <string name="confirm_yes_button">Yum! :)</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="home_title">AsQuirrelz</string>
     <string name="optin_bottom_text">nearby places.</string>
     <string name="optin_top_text">Enable location to find</string>
     <string name="press">Press ME</string>
     <string name="register">Register Food</string>
+    <string name="title_activity_hooray">Hooray</string>
+    <string name="title_activity_nay">Nay</string>
     <!-- From: file:/Users/Bradley/Documents/Gimbal/ChestnutsOfPassion/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppBaseTheme" parent="android:Theme.Light">

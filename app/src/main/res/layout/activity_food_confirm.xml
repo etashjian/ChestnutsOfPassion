@@ -24,4 +24,6 @@
         android:text="@string/confirm_no_button"
         android:textSize="32pt"
         android:onClick="confirmNo"/>
+
+
 </LinearLayout>

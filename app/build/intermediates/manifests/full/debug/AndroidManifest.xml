@@ -37,6 +37,14 @@
     <!-- FOR PUSH -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
+    <android:uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/app_icon"
@@ -95,6 +103,7 @@
             android:name="com.gimbal.android.sample.SettingsActivity"
             android:icon="@drawable/ic_action_settings"
             android:label="@string/action_settings" />
+        <activity android:name="com.gimbal.android.sample.FoodConfirmActivity" />
 
         <service
             android:name="com.gimbal.android.sample.AppService"
@@ -119,6 +128,15 @@
                 <action android:name="android.intent.action.ACTION_SHUTDOWN" />
             </intent-filter>
         </receiver>
+
+        <activity
+            android:name="com.gimbal.android.sample.Hooray"
+            android:label="@string/title_activity_hooray" >
+        </activity>
+        <activity
+            android:name="com.gimbal.android.sample.Nay"
+            android:label="@string/title_activity_nay" >
+        </activity>
     </application>
 
 </manifest>

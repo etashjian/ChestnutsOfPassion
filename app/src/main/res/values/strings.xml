@@ -37,6 +37,10 @@
     <string name="confirm_text">You\'ve got foods?</string>
     <string name="confirm_yes_button">Yum! :)</string>
     <string name="confirm_no_button">All gone ):</string>
+    <string name="title_activity_hooray">Hooray</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_nay">Nay</string>
 
 </resources>
 
