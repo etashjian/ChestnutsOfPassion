@@ -97,6 +97,9 @@
             android:icon="@drawable/ic_action_settings"
             android:label="@string/action_settings" />
 
+        <activity
+            android:name=".FoodConfirmActivity" />
+
         <service
             android:name=".AppService"
             android:exported="false" />

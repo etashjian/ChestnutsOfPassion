@@ -19,9 +19,11 @@ package com.gimbal.android.sample;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import android.app.Service;
 import android.content.Context;
@@ -49,6 +51,7 @@ public class AppService extends Service {
     private LinkedList<GimbalEvent> events;
     private PlaceEventListener placeEventListener;
     private CommunicationListener communicationListener;
+
 
     @Override
     public void onCreate() {
@@ -82,6 +85,7 @@ public class AppService extends Service {
                 mNotificationManager.notify(1, mBuilder.build());
 
                 addEvent(new GimbalEvent(TYPE.PLACE_ENTER, visit.getPlace().getName(), new Date(visit.getArrivalTimeInMillis())));
+
             }
 
             @Override
@@ -92,6 +96,7 @@ public class AppService extends Service {
 
                 Toast.makeText(getApplicationContext(), "Bye Kavya :(", Toast.LENGTH_LONG).show();
                 addEvent(new GimbalEvent(TYPE.PLACE_EXIT, visit.getPlace().getName(), new Date(visit.getDepartureTimeInMillis())));
+
             }
         };
         PlaceManager.getInstance().addListener(placeEventListener);

@@ -16,6 +16,7 @@ import org.apache.http.impl.auth.BasicScheme;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -31,13 +32,13 @@ import java.net.*;
  */
 public class GimbalServer {
 
-    public static boolean is_food_available(Place place) {
+    public static boolean is_food_available(String id) {
 
         boolean avail = false;
 
         try
         {
-            String retval = new GimbalServerGet().execute(place.getIdentifier()).get();
+            String retval = new GimbalServerGet().execute(id).get();
             avail = retval.contains("Food\":\"TRUE");
         } catch (Exception e) {
             Log.e("AppService", e.toString());
@@ -46,17 +47,14 @@ public class GimbalServer {
         return avail;
     }
 
-    public static void set_food_available(boolean available, Place place) {
+    public static void set_server_pair(String key, String value, String id) {
         try
         {
-            String retval = new GimbalServerGet().execute(place.getIdentifier()).get();
-            if(available) {
-                retval = retval.replaceAll("FALSE", "TRUE");
-            } else {
-                retval = retval.replaceAll("TRUE", "FALSE");
-            }
+            String retval = new GimbalServerGet().execute(id).get();
+            // I'm lazy. assuming that key map already has key.
+            retval = retval.replaceAll(key + "\":\"[^\"]+", key + "\":\"" + value);
 
-            String in[] = {place.getIdentifier(), retval};
+            String in[] = {id, retval};
             new GimbalServerPut().execute(in).get();
         } catch (Exception e) {
             Log.e("AppService", e.toString());
